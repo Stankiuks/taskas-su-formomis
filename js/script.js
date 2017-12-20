@@ -3,10 +3,8 @@ document.getElementById('SiustiDuomenis').addEventListener('click', function (ev
 
     var vardas = document.forms['myForm']['Vardas'].value;
     var pavarde = document.forms['myForm']['Pavarde'].value;
-    var gimimoMetai = document.forms['myForm']['GimimoMetai'].value;
-    var telNumeris = document.forms['myForm']['TelNumeris'].value;
     var elPastas = document.forms['myForm']['ElPastas'].value;
-    var adresas = document.forms['myForm']['Adresas'].value;
+
 
     if(vardas.trim() == ''){
         document.forms['myForm']['Vardas'].value = '';
@@ -33,8 +31,29 @@ document.getElementById('SiustiDuomenis').addEventListener('click', function (ev
     }
 });
 
-function myFunction() {
-    var table = document.getElementById("table");
+var Contacts = [
+    [document.forms['myForm']['Vardas'].value],
+    [document.forms['myForm']['Pavarde'].value],
+    [document.forms['myForm']['GimimoMetai'].value],
+    [document.forms['myForm']['TelNumeris'].value],
+    [document.forms['myForm']['ElPastas'].value],
+    [document.forms['myForm']['Adresas'].value]
+];
+
+var headerContacts = ['Vardas', 'Pavarde', 'Gimimo metai', 'Telefono numeris', 'El pastas', 'Adresas'];
+createTable(auto,headerAuto,);
+function createTable(Contacts, headerContacts) {
+
+}
+
+
+
+
+
+
+/* senas lenteles kurimo bandymas
+function myFunction( {
+    var table = document.createElement("table");
     var row = table.insertRow();
     var vardas = row.insertCell(0);
     var pavarde = row.insertCell(1);
@@ -48,5 +67,9 @@ function myFunction() {
     telNumeris.innerHTML = document.forms['myForm']['TelNumeris'];
     elPastas.innerHTML = document.forms['myForm']['ElPastas'];
     adresas.innerHTML = document.forms['myForm']['Adresas'];
-};
+});
+*/
+
+
+
 
